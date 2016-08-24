@@ -43,15 +43,28 @@
           <div role="tabpanel" class="tab-pane fade in active" id="home1">
 <div class="container-fluid">
   <h1 class="text-center">Thank You</h1>
-  <div class="col-md-6 col-md-offset-3"> We appreciate your communication and will respond within 48 hours. Here's the data we received:
+  <div class="col-md-6 col-md-offset-3">Here's the data we received:
 	<br>
 	<?php
 	if (@$_POST[submit])
 	{
 		$email=$_POST["email"];
 		$comment=$_POST["comment"];
-		echo "Email:$email<br>Comment:$comment";
-		mail("behindesigns@gmail.com","New Comment",$comment,"From: $email");
+		$purpose=$_POST["purpose"];
+		$requirements=$_POST["requirements"];
+		$contact=$_POST["contact"];
+		
+		$msg= "Email:$email<br>Comment:$comment<br>Purpose:#purpose<br>Requirements:$requirements<br>Contact:$contact<br>";
+		
+		echo $msg.		
+			"\n<hr>Sending email...\n<br>";
+		$result =mail("behindesigns@gmail.com","New Comment",$msg,"From: $email\n");
+		
+		if(!$result)
+			 echo "Error";
+		else 
+			echo "Successfully sent.\n<br>We appreciate your communication and will respond within 48 hours.";
+		
 	}
 	else
 		echo "ERROR: no POST submitted plz email a screenshot to behindesigns@gmail.com";

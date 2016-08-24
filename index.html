@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://ogp.me/ns/fb#">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:image" content="http://i.imgur.com/Vc4m6rX.png" />
+<meta property="og:url" content="http://behin.atwebpages.com/designs/"/>
+<meta property="og:title" content="Behin Designs!" />
 <title>Behin Designs!</title>
 
 <!-- Bootstrap -->
@@ -73,12 +77,8 @@ function validateContactForm() {
           
           <li role="presentation" class="active"><a href="#home1" data-toggle="tab" role="tab" aria-controls="tab1"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home </a></li>
           <li role="presentation"><a href="#paneTwo1" data-toggle="tab" role="tab" aria-controls="tab2"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> About</a></li>
-          <li role="presentation" class="dropdown"><a href="#" id="tabDropOne1" class="dropdown-toggle" data-toggle="dropdown" role="tab" aria-controls="tab3" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span> Business<span class="caret"></span></a>
-            <ul class="dropdown-menu" aria-labelledby="tabDropOne1">
-              <li><a href="#tabDropDownOne1" tabindex="-1" data-toggle="tab">Contact</a></li>
-              <li><a href="#tabDropDownTwo1" tabindex="-1" data-toggle="tab">Request Quote</a></li>
-            </ul>
-          </li>
+		  <li role="presentation"><a href="#paneThree1" data-toggle="tab" role="tab" aria-controls="tab2"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Business</a></li>
+         
         </ul>
 <div id="tabContent1" class="tab-content">
           <div role="tabpanel" class="tab-pane fade in active" id="home1">
@@ -97,7 +97,7 @@ function validateContactForm() {
             <a href="http://dalaroth.awardspace.com" target="_NEW"><button type="button" class="btn btn-info">Dalaroth</button></a></p>
             <p>His personal blog is called Behin Live:  <a href="http://behin.atwebpages.com" target="_NEW"><button type="button" class="btn btn-info">Behin Live</button></a></p>
           </div>
-          <div role="tabpanel" class="tab-pane fade" id="tabDropDownOne1">
+          <div role="tabpanel" class="tab-pane fade" id="paneThree1">
             <p>Behin can be reached by email via the following form: </p>
 			
             
@@ -113,14 +113,12 @@ function validateContactForm() {
                             <textarea class="form-control" rows="5" name="comment" id="comment"></textarea>
                         </div>
                 	</div>
-                <input type="submit" name="submit" id="submit" value="Submit"> At this time additional submissions are disabled, apologies for the inconvenience.
-                </form>
+                <input type="submit" name="submit" id="submit" value="Submit Comment Only">
+                
 	       	 </div>
-             
-             
-        </div>
-        <div role="tabpanel" class="tab-pane fade" id="tabDropDownTwo1">
+			 <hr>
             <div class="row">
+<p>Should you be interested in a design as well, you may request a quote at this time.</p>
 <p>In order to request a quote from Behin Designs we need some basic information first.</p>
 
 <div class="radio">
@@ -138,25 +136,22 @@ function validateContactForm() {
               <!-- /.col-lg-6 -->
               <div class="col-lg-6">
                 <div class="input-group"><span class="label label-primary">Primary purpose for site:</span><span class="input-group-addon"> </span>
-                  <input type="text" class="form-control" placeholder="What is the primary purpose for your site?">
+                  <input type="text" name="purpose" id="purpose" class="form-control" placeholder="What is the primary purpose for your site?">
                 </div>
                 <!-- /input-group -->
               </div>
               <div class="col-lg-6"><span class="label label-info">Requirements:</span>
                 <div class="input-group"><span class="input-group-addon">
                   </span>
-                  <input type="text" class="form-control" placeholder="Any specific requirements such as mobile friendly or forums?">
-                  <input type="text" class="form-control" placeholder="Your contact info? (Email Address/Phone #)">
-                  <button type="button" class="btn btn-success">Submit</button>
+                  <input type="text" name="requirements" id="requirements" class="form-control" placeholder="Any specific requirements such as mobile friendly or forums?">
+                  <input type="text" name="contact" id="contact" class="form-control" placeholder="Would you prefer a call as a response? (enter Phone # if so)">
+                  <button type="submit" name="submit" id="submit" value="Submit" class="btn btn-success">Submit Request and Comment</button>
                 </div>
                 <!-- /input-group -->
               </div>
               <!-- /.col-lg-6 -->
-            </div>
-          </div>
-        </div>
-      </div>
 <!-- Collect the nav links, forms, and other content for toggling -->      <!-- /.navbar-collapse --> 
+</form>
     </div>
     <!-- /.container-fluid --> 
   </nav>
